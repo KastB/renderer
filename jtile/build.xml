@@ -2,9 +2,13 @@
   <property name="src" location="src"/>
   <property name="build" location="build"/>
   <property name="jarfile" location="./jtile.jar"/>
-  <property name="batik.dir" value="/usr/local/bin/batik-1.7/"/>
+  <property name="batik.dir" value="/usr/share/java//"/>
   <path id="classpath">
     <fileset dir="${batik.dir}" includes="**/batik*.jar"/>
+    <fileset dir="${batik.dir}" includes="**/xml-apis-ext.jar"/>
+    <fileset dir="${batik.dir}" includes="**/xmlgraphics*.jar"/>
+    
+
   </path>
             
   <target name="init">
@@ -22,6 +26,8 @@
         <attribute name="Class-Path" value="$jarfile"/>
       </manifest>
       <zipgroupfileset dir="${batik.dir}" includes="**/batik-*.jar" />
+      <zipgroupfileset dir="${batik.dir}" includes="**/xml-apis-ext.jar"/>
+      <zipgroupfileset dir="${batik.dir}" includes="**/xmlgraphics*.jar"/>
     </jar>
   </target>
 
