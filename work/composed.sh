@@ -2,7 +2,7 @@
 #getworld
 mkdir tmp cache tiles
 echo "getworld"
-echo "[timeout:3600];(rel['seamark:type'];>;way['seamark:type'];>;node['seamark:type'];);out meta;" | ~/opt/overpass/bin/osm3s_query --db-dir=/export/home/bernd/data/overpass_db/ > next.osm 2> errors.txt
+echo "[timeout:3600];(rel['seamark:type'];>;way['seamark:type'];>;node['seamark:type'];);out meta;" | ~/opt/overpass/bin/osm3s_query --db-dir=/home/renderaccount/overpass_db/ > next.osm 2> errors.txt
 echo "getworld - done"
 
 touch world.osm
